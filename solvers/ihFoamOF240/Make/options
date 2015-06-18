@@ -20,5 +20,5 @@ EXE_LIBS = \
     -lmeshTools \
     -lsampling \
     -L$(FOAM_USER_LIBBIN) \
-    -lIHwaveGeneration \
-    -lIHwaveAbsorption
+    -lIHwaveGeneration -u IHGenerationLoad \
+    -lIHwaveAbsorption -u IHAbsorptionLoad
