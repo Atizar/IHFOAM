@@ -12,9 +12,11 @@ EXE_INC = \
 
 EXE_LIBS = \
     -limmiscibleIncompressibleTwoPhaseMixture \
+    -linterfaceProperties -u interfacePropertiesLoad \
+    -lincompressibleTransportModels \
     -lincompressibleTurbulenceModel \
-    -lincompressibleRASModels \
-    -lincompressibleLESModels \
+    -lincompressibleRASModels -u incompressibleRASModelsLoad \
+    -lincompressibleLESModels -u incompressibleLESModelsLoad \
     -lfiniteVolume \
     -lfvOptions \
     -lmeshTools \

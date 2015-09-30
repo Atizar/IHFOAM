@@ -11,12 +11,12 @@ EXE_INC = -ggdb3 \
 
 EXE_LIBS = \
     -ltwoPhaseMixture \
-    -linterfaceProperties \
-    -ltwoPhaseProperties \
+    -linterfaceProperties -u interfacePropertiesLoad \
+    -ltwoPhaseProperties -u twoPhasePropertiesLoad \
     -lincompressibleTransportModels \
     -lincompressibleTurbulenceModel \
-    -lincompressibleRASModels \
-    -lincompressibleLESModels \
+    -lincompressibleRASModels -u incompressibleRASModelsLoad \
+    -lincompressibleLESModels -u incompressibleLESModelsLoad \
     -lfiniteVolume \
     -lmeshTools \
     -lfvOptions \

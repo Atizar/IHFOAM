@@ -15,9 +15,11 @@ EXE_INC = \
 
 EXE_LIBS = \
     -limmiscibleIncompressibleTwoPhaseMixture \
+    -linterfaceProperties -u interfacePropertiesLoad \
+    -lincompressibleTransportModels \
     -lincompressibleTurbulenceModel \
-    -lincompressibleRASModels \
-    -lincompressibleLESModels \
+    -lincompressibleRASModels -u incompressibleRASModelsLoad \
+    -lincompressibleLESModels -u incompressibleLESModelsLoad \
     -lfiniteVolume \
     -ldynamicMesh \
     -ldynamicFvMesh \
@@ -26,5 +28,5 @@ EXE_LIBS = \
     -lfvOptions \
     -lsampling \
     -L$(FOAM_USER_LIBBIN) \
-    -lIHwaveGeneration \
-    -lIHwaveAbsorption
+    -lIHwaveGeneration -u IHGenerationLoad \
+    -lIHwaveAbsorption -u IHAbsorptionLoad
